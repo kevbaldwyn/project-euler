@@ -1,0 +1,23 @@
+{
+    "name": "edgallois/project-euler",
+    "description": "Solutions to the project euler problems",
+
+    "require": {
+        "php": ">=5.5",
+        "symfony/console": "dev-master"
+    },
+
+    "require-dev": {
+        "phpunit/phpunit": "4.*",
+        "mockery/mockery":"dev-master"
+    },
+
+    "autoload": {
+        "psr-0": {
+            "KevBaldwyn\\ProjectEuler":"src/"
+        },
+        "classmap": [
+            "src"
+        ]
+    }
+}
