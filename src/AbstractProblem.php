@@ -22,10 +22,12 @@ abstract class AbstractProblem extends Command {
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        $start = microtime(true);
         $answer = $this->calculateAnswer();
+        $end = microtime(true);
         $output->writeln('<comment>> ' . $this->title() . '</comment>');
         $output->writeln(' <comment> ' . $this->describe() . '</comment>');
-        $output->writeln('<info>= ' . $answer . '</info>');
+        $output->writeln('<info>= ' . $answer . ' in (' . round(($end - $start) / 1000, 2) . ' seconds)</info>');
     }
 
 }
