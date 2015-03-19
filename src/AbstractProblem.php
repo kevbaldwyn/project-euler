@@ -27,7 +27,7 @@ abstract class AbstractProblem extends Command {
         $end = microtime(true);
         $output->writeln('<comment>> ' . $this->title() . '</comment>');
         $output->writeln(' <comment> ' . $this->describe() . '</comment>');
-        $output->writeln('<info>= ' . $answer . ' in (' . round(($end - $start) / 1000, 2) . ' seconds)</info>');
+        $output->writeln('<info>= ' . $answer . ' in (' . (($end - $start) * 1000) . ' miliseconds)</info>');
     }
 
 }
