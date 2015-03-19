@@ -6,8 +6,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 abstract class AbstractProblem extends Command {
 
-	private $answer;
-
 	abstract public function name();
 
 	abstract public function title();
